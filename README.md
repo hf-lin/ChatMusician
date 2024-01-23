@@ -8,11 +8,12 @@ If artificial intelligence cannot effectively model the delicate, emotional, and
 
 |                             | HuggingFace model                                                               |  
 |-----------------------------|---------------------------------------------------------------------------------|
-| continuously pretrain model | [ChatMusician-v1-base](https://huggingface.co/m-a-p/ChatMusician-v1-base)       |
-| sft model                   | [ChatMusician-v1-sft-78k](https://huggingface.co/m-a-p/ChatMusician-v1-sft-78k) |
-|                             | [ChatMusician-v1-sft-1M](https://huggingface.co/m-a-p/ChatMusician-v1-sft-1M)   |
+| continuously pretrain model | Coming soon       |
+| sft model                   | Coming soon |
+
 
 ## Dataset
+
 
 The models are trained on the [🤗 ChatMusician-v1-pt Dataset](https://huggingface.co/datasets/m-a-p/ChatMusician-v1-pt), which is the first pretraining corpus for developing musical abilities in large language models. Check out the dataset card for more details.
 
