@@ -152,8 +152,8 @@ def postprocess_abc(text, conversation_id):
         # Convert xml to SVG and WAV using MuseScore (requires MuseScore installed)
         svg_file = f'tmp/{conversation_id}/{tmp_abc.stem}.svg'
         wav_file = f'tmp/{conversation_id}/{tmp_abc.stem}.mp3'
-        subprocess.run(["./MuseScore-4.1.1.232071203-x86_64.AppImage", "-f", "-o", svg_file, tmp_midi])
-        subprocess.run(["./MuseScore-4.1.1.232071203-x86_64.AppImage", "-f", "-o", wav_file, tmp_midi])
+        subprocess.run(["musescore", "-f", "-o", svg_file, tmp_midi])
+        subprocess.run(["musescore", "-f", "-o", wav_file, tmp_midi])
 
         # Remove the tmp file
         # tmp_abc.unlink()
