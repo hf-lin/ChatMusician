@@ -67,8 +67,6 @@ cd ChatMusician/
 python model/infer/chatmusician_web_demo.py -c "m-a-p/ChatMusician" --server_port 8888
 ```
 
-ChatMusician produces symbolic music(ABC notation) well in the following prompts. Here are some musical tasks.
-
 Prompt example:
 ```
 Using ABC notation, recreate the given text as a musical score.
