@@ -1,6 +1,6 @@
 # 🎼 ChatMusician: Fostering Intrinsic Musical Abilities Into LLM
 
-[**🌐 DemoPage**](https://ezmonyi.github.io/ChatMusician/) | [**🤗 Dataset**](https://huggingface.co/datasets/m-a-p/MusicPile) | [**🤗 Benchmark**](https://huggingface.co/datasets/m-a-p/MusicTheoryBench) | [**📖 arXiv**](http://arxiv.org/abs/2402.16153) | [**Code**](https://github.com/hf-lin/ChatMusician) | [**Model**](https://huggingface.co/m-a-p/ChatMusician)
+[**🌐 DemoPage**](https://ezmonyi.github.io/ChatMusician/) | [**🤗 Dataset**](https://huggingface.co/datasets/m-a-p/MusicPile) | [**🤗 Benchmark**](https://huggingface.co/datasets/m-a-p/MusicTheoryBench) | [**📖 arXiv**](http://arxiv.org/abs/2402.16153) | [💻 **Code**](https://github.com/hf-lin/ChatMusician) | [**🤖 Model**](https://huggingface.co/m-a-p/ChatMusician)
 
 ## 🔔News
 - **🔥[2023-12-10]: The release of ChatMusician's demo, code, model, data, and benchmark. 😆**
