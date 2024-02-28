@@ -252,7 +252,7 @@ def _launch_demo(args, model, tokenizer):
         gr.Examples(
             examples=[
                     ["Utilize the following musical structure as a guide to shape your composition.\n'Binary', 'Sectional: Verse/Chorus'"],
-                    ["Create music by following the alphabetic representation of the assigned musical structure and the given motif.\n'ABCA';X:1\nL:1\/16\nM:2\/4\nK:A\n['E2GB d2c2 B2A2', 'D2 C2E2 A2c2']"],
+                    ["Create music by following the alphabetic representation of the assigned musical structure and the given motif.\n'ABCA';X:1\nL:1/16\nM:2/4\nK:A\n['E2GB d2c2 B2A2', 'D2 C2E2 A2c2']"],
                     ["Create sheet music in ABC notation from the provided text.\nAlternative title: \nThe Legacy\nKey: G\nMeter: 6/8\nNote Length: 1/8\nRhythm: Jig\nOrigin: English\nTranscription: John Chambers"],
                     ["Develop a melody using the given chord pattern.\n'C', 'C', 'G/D', 'D', 'G', 'C', 'G', 'G', 'C', 'C', 'F', 'C/G', 'G7', 'C'"]
                 ],
