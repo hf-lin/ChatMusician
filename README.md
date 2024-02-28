@@ -29,7 +29,7 @@ dropout were set to 64, 16, and 0.1, with a batch size of 8.
 
 ## Evaluation
 
-1. Music understanding abilities are evaluated on the [MusicTheoryBench](https://huggingface.co/datasets/m-a-p/MusicTheoryBench).
+1. Music understanding abilities are evaluated on the [MusicTheoryBench](https://huggingface.co/datasets/m-a-p/MusicTheoryBench). The evaluation code will be available in the coming weeks.
 2. General language abilities of ChatMusician are evaluated  on the [Massive Multitask Language Understanding (MMLU) dataset](https://huggingface.co/datasets/lukaemon/mmlu).
 
 
