@@ -109,3 +109,25 @@ run `model/train/train.sh`
 cd Chat-Musician/
 python model/train/merge.py --ori_model_dir {base_model} --model_dir {lora_ckpt_path} --output_dir {output_path}
 ```
+
+## Limitations
+
+- ChatMusician currently only supports strict format and close-ended instructions for the music tasks. If we have more funding, we plan to create a more diverse multi-turn music instruction chat data for better generalization.
+- ChatMusician suffers from hallucinations, and shouldn't be used for music education. It could be improved by feeding more music textbooks, blogs, etc. And RLHF may help, too.
+- A large portion of the training data is in the style of Irish music. If possible, the community should develop a converter between performance midi and ABC scores, so that we can include more established midi datasets.
+- The MusicThoeryBench results reported in the paper are obtained with perplexity mode. Direct generation may result in a worse performance.
+- We observe that using the current version of training data, ChatMusician presents a weak in-context-learning and chain-of-thoughts ability. The community should work on improving the music data quality. 
+
+
+## Citation
+If you find our work helpful, feel free to give us a cite.
+```
+@misc{yuan2024chatmusician,
+      title={ChatMusician: Understanding and Generating Music Intrinsically with LLM}, 
+      author={Ruibin Yuan and Hanfeng Lin and Yi Wang and Zeyue Tian and Shangda Wu and Tianhao Shen and Ge Zhang and Yuhang Wu and Cong Liu and Ziya Zhou and Ziyang Ma and Liumeng Xue and Ziyu Wang and Qin Liu and Tianyu Zheng and Yizhi Li and Yinghao Ma and Yiming Liang and Xiaowei Chi and Ruibo Liu and Zili Wang and Pengfei Li and Jingcheng Wu and Chenghua Lin and Qifeng Liu and Tao Jiang and Wenhao Huang and Wenhu Chen and Emmanouil Benetos and Jie Fu and Gus Xia and Roger Dannenberg and Wei Xue and Shiyin Kang and Yike Guo},
+      year={2024},
+      eprint={2402.16153},
+      archivePrefix={arXiv},
+      primaryClass={cs.SD}
+}
+```
