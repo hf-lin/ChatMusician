@@ -79,7 +79,7 @@ Rhythm reel
 ```
 ![chatmusician web demo](model/res/prompt1.png)
 
-### inferece locally
+### inference locally
 
 ```bash
 cd Chat-Musician/
