@@ -1,4 +1,4 @@
-# 🎼 ChatMusician: Fostering Intrinsic Musical Abilities Into LLM
+# 🎼 ChatMusician: Understanding and Generating Music Intrinsically with LLM
 
 [**🌐 DemoPage**](https://ezmonyi.github.io/ChatMusician/) |  [**🤗 Pretrain Dataset**](https://huggingface.co/datasets/m-a-p/MusicPile) | [**🤗 SFT Dataset**](https://huggingface.co/datasets/m-a-p/MusicPile-sft) | [**🤗 Benchmark**](https://huggingface.co/datasets/m-a-p/MusicTheoryBench) | [**📖 arXiv**](http://arxiv.org/abs/2402.16153) | [💻 **Code**](https://github.com/hf-lin/ChatMusician) | [**🤖 Chat Model**](https://huggingface.co/m-a-p/ChatMusician) | [**🤖 Base Model**](https://huggingface.co/m-a-p/ChatMusician-Base)
 
@@ -79,7 +79,7 @@ Rhythm reel
 ```
 ![chatmusician web demo](model/res/prompt1.png)
 
-### inferece locally
+### inference locally
 
 ```bash
 cd Chat-Musician/
