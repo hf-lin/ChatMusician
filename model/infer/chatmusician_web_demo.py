@@ -26,7 +26,7 @@ logging.basicConfig(
     datefmt='%Y-%m-%d %H:%M:%S'
 )
 
-DEFAULT_CKPT_PATH = '/data/hanfeng/chat_musician_models/epoch-2-step-285220/'
+DEFAULT_CKPT_PATH = 'm-a-p/ChatMusician'
 
 def _get_args():
     parser = ArgumentParser()
@@ -235,13 +235,19 @@ def _launch_demo(args, model, tokenizer):
                 f"<h2><center>{args.title}</center></h2>"
             )
         gr.Markdown("""\
-        <center><font size=4>Chat-Musician <a href="https://huggingface.co/m-a-p/ChatMusician-v1-sft-78k">🤗</a>&nbsp ｜ 
-        &nbsp<a href="https://github.com/a43992899/Chat-Musician">Github</a></center>""")
+        <center><font size=4><a href="https://ezmonyi.github.io/ChatMusician/">🌐 DemoPage</a>&nbsp |
+        &nbsp<a href="https://github.com/hf-lin/ChatMusician">💻 Github</a>&nbsp |
+        &nbsp<a href="http://arxiv.org/abs/2402.16153">📖 arXiv</a>&nbsp |
+        &nbsp<a href="https://huggingface.co/datasets/m-a-p/MusicTheoryBench">🤗 Benchmark</a>&nbsp |
+        &nbsp<a href="https://huggingface.co/datasets/m-a-p/MusicPile">🤗 Pretrain Dataset</a>&nbsp |
+        &nbsp<a href="https://huggingface.co/datasets/m-a-p/MusicPile-sft">🤗 SFT Dataset</a>&nbsp |
+        &nbsp<a href="https://huggingface.co/m-a-p/ChatMusician">🤖 Chat Model</a>&nbsp |
+        &nbsp<a href="https://huggingface.co/m-a-p/ChatMusician-Base">🤖 Base Model</a></center>""")
         gr.Markdown("""\
-    <center><font size=4>💡Note: The music clips on this page is auto-converted by abc notations which may not be perfect, 
+    <center><font size=4>💡Note: The music clips on this page is auto-converted from abc notations which may not be perfect, 
     and we recommend using better software for analysis.</center>""")
 
-        chatbot = gr.Chatbot(label='Chat-Musician', elem_classes="control-height", height=750)
+        chatbot = gr.Chatbot(label='ChatMusician', elem_classes="control-height", height=750)
         query = gr.Textbox(lines=2, label='Input')
         task_history = gr.State([])
         
@@ -251,10 +257,10 @@ def _launch_demo(args, model, tokenizer):
             # regen_btn = gr.Button("🤔️ Regenerate (重试)")
         gr.Examples(
             examples=[
-                    ["Utilize the following musical structure as a guide to shape your composition.\n'Binary', 'Sectional: Verse/Chorus'"],
                     ["Create music by following the alphabetic representation of the assigned musical structure and the given motif.\n'ABCA';X:1\nL:1/16\nM:2/4\nK:A\n['E2GB d2c2 B2A2', 'D2 C2E2 A2c2']"],
                     ["Create sheet music in ABC notation from the provided text.\nAlternative title: \nThe Legacy\nKey: G\nMeter: 6/8\nNote Length: 1/8\nRhythm: Jig\nOrigin: English\nTranscription: John Chambers"],
                     ["Develop a melody using the given chord pattern.\n'C', 'C', 'G/D', 'D', 'G', 'C', 'G', 'G', 'C', 'C', 'F', 'C/G', 'G7', 'C'"]
+                    ["Produce music in compliance with the outlined musical setup in language.\n'Binary', 'Sectional: Verse/Chorus'"],
                 ],
             inputs=query
             )   
