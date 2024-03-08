@@ -18,8 +18,8 @@ margin. Our work reveals that LLMs can be an excellent compressor for music, but
 ## Training Data
 
 ChatMusician is pretrained on the 🤗 [MusicPile](https://huggingface.co/datasets/m-a-p/MusicPile), which is the first pretraining corpus for **developing musical abilities** in large language models. Check out the dataset card for more details.
-And supervised finetuned on 1.1M samples(2:1 ratio between music scores
-and music knowledge & music summary data) from MusicPile. Check our [paper](http://arxiv.org/abs/2402.16153) for more details.
+And supervised finetuned on 1.1M samples(2:1 ratio between music knowledge & music summary data
+and music scores) from MusicPile. Check our [paper](http://arxiv.org/abs/2402.16153) for more details.
 
 ## Training Procedure
 
@@ -92,7 +92,8 @@ Note: with `--with_prompt`, input text will be converted to chat format.
 ### Data Preprocessing
 
 ```bash
-## preprocess continue pretraining data
+## specify `--tokenize_fn pt` for preprocessing continual pretrain data
+## specify `--tokenize_fn sft` for preprocessing sft data
 python model/train/data_preprocess.py \
     -t $TOKENIZER_PATH \
     -i $DATA_FILE \
@@ -101,12 +102,12 @@ python model/train/data_preprocess.py \
 
 ### Pretraining or Supervised Fine-tuning
 
-run `model/train/train.sh`
+run `model/train/scripts/train.sh ${PREPROCESSED_DATASET_PATH} ${YOUR_MODEL_PATH}`
 
 ## Merge Peft Model
 
 ```bash
-cd Chat-Musician/
+cd ChatMusician/
 python model/train/merge.py --ori_model_dir {base_model} --model_dir {lora_ckpt_path} --output_dir {output_path}
 ```
 
