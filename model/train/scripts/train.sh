@@ -31,4 +31,5 @@ deepspeed model/train/train.py \
     --save_model_step 2000 \
     --ds_file $DS_CONFIG \
     --show_loss_step 50 \
-    --output_dir $OUTPUT_DIR
+    --output_dir $OUTPUT_DIR \
+    --gradient_checkpointing
