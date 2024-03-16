@@ -74,9 +74,9 @@ def main(args):
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-t', '--tokenizer_path', default=None, type=str, required=True)
+    parser.add_argument('-t', '--tokenizer_path', default="m-a-p/ChatMusician-Base", type=str, required=True)
     parser.add_argument('-w', '--preprocessing_num_workers', default=64, type=int)
-    parser.add_argument('-i', '--input_file',default="m-a-p/ChatMusician-v1-pt", type=str,help="")
+    parser.add_argument('-i', '--input_file',default="m-a-p/MusicPile-sft", type=str,help="")
     parser.add_argument('-o', '--output_dir',default=None, type=str, help="")
     parser.add_argument('--text_field',default='text', type=str, help="")
     parser.add_argument('--tokenize_fn', default='pt', type=str, choices=["pt", "sft"], help="")
