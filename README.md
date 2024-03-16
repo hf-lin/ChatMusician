@@ -91,14 +91,16 @@ Note: with `--with_prompt`, input text will be converted to chat format.
 ### SFT Data Format
 
 Our SFT dataset comprises data points structured with three main features: `instruction`, `input`, and `output`. Each data point resembles a conversation between a human and an assistant, formatted as follows: `Human: {...} </s> Assistant: {...} </s>. `
-For example, 
-    ```
+
+For example,
+
     {
     "instruction": "Construct melodies by blending the designated musical pattern with the supplied motif.",
     "input": "['Binary', 'Sectional: Verse/Chorus'];X:1 L:1/16 M:2/4 K:G ['G2BG A2cA B2dB', '(gf)(ge) (ed)(cB)' </s> ",
     "output": "Assistant: X:1 L:1/16 M:2/4 K:G G2BG A2cA | B2dB G2B2 | c2ec B2dB | ABAG (GF)(ED) | G2BG A2cA | B2dB c2ec | cBAG D2f2 | g2d2B2G2 || (gf)(ge) (ed)(cB) | (gf)(ge) (ed)(cB) | ca2c Bg2B | ABAG GFED | G2BG A2cA | cBAG d2f2 | g2d2B2G2 || </s> "
     }
-    ```
+    
+
 You can explore more samples at [MusicPile-sft](https://huggingface.co/datasets/m-a-p/MusicPile-sft). We recommend structuring your data in a similar format for fine-tuning based on ChatMusician-Base.
 
 ### Data Preprocessing
@@ -131,7 +133,7 @@ For example, if you're fine-tuning based on `m-a-p/ChatMusician-Base` for superv
 ```bash
 ./model/train/scripts/train.sh datasets m-a-p/ChatMusician-Base
 ```
-You can then find the tensorboard log in the runs directory.
+You can then find the tensorboard log in the `runs` directory.
 
 ## Merge Peft Model
 
