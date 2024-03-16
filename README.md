@@ -142,6 +142,9 @@ After finetuning,  you can merge the LoRa checkpoint with the original checkpoin
 cd ChatMusician/
 python model/train/merge.py --ori_model_dir $BASE_MODEL --model_dir $LORA_CKPT_PATH --output_dir $OUTPUT_PATH
 ```
+## Need Help?
+
+If you find yourself confused or encountering any issues, feel free to create an issue on our repository for assistance.
 
 ## Limitations
 
