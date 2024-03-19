@@ -60,7 +60,7 @@ if __name__ == '__main__':
             args.tokenizer_path = args.base_model
     tokenizer = AutoTokenizer.from_pretrained(
         args.tokenizer_path, 
-        trust_remote_code=True
+        trust_remote_code=True,
         resume_download=True,
     )
 
