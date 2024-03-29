@@ -41,7 +41,7 @@ def main(args):
 
         return {'input_ids': input_ids, 'labels': labels}
 
-    filename = '.'.join(args.input_file.split("/")[-1].split(".")[:-1])
+    filename = '.'.join(args.input_file.split("/")[-1].split(".")[:-1]) if os.path.exists(args.input_file) else 'processed_tokens'
     os.makedirs(args.output_dir, exist_ok=True)
     cache_dir = os.path.join(args.output_dir, filename)
     tmp_cache_dir = os.path.join(args.output_dir, filename+"_text")
