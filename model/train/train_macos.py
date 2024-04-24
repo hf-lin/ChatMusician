@@ -1,28 +1,5 @@
 import os
 
-try:
-  import google.colab
-  IN_COLAB = True
-except:
-  IN_COLAB = False
-
-if IN_COLAB:
-  from google.colab import drive
-  colab_root = '/content/drive'
-
-  if not os.path.exists(colab_root):
-    drive.mount(colab_root)
-
-# Set up huggingface environment
-
-if IN_COLAB:
-  os.environ["HF_HOME"] = "/content/drive/MyDrive/cache/huggingface"
-  os.environ["HF_DATASETS_CACHE"] = "/content/drive/MyDrive/cache/huggingface/datasets"
-
-elif os.path.exists("/Users/petergreis/Dropbox/Leeds/Project"):
-  os.environ["HF_HOME"] = "/Users/petergreis/Dropbox/Leeds/Project/huggingface"
-  os.environ["HF_DATASETS_CACHE"] = "/Users/petergreis/Dropbox/Leeds/Project/huggingface/cache"
-
 import argparse
 import json
 import math
